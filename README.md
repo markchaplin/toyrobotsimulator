@@ -15,7 +15,7 @@ The `X` and `Y` parameters correspond to the x and y coordinates of the grid, wi
 
 The `REPORT` command will output the current postion and direction in the format `X,Y,DIRECTION`. 
 
-All invalid commands will be ignored, including commands that would cause the robot to leave the board. 
+All invalid commands will be ignored, including commands that would cause the robot to leave the board. The input field will validate the above commands.
 
 ## Running the simulator
 
@@ -37,4 +37,18 @@ There are some tests for the core `simulateRobot` function. These tests can be r
 yarn test
 ```
 
+## Further improvements
 
+To take this project further, the following can be implemented going forward:
+
+### Handle various grid sizes
+
+The core `Robot` class was designed to handle any grid size, with the size of the grid being set during instantiation. However, the React app has been hardcoded to the 5 x 5 grid. This includes the styling, layout etc. 
+
+It would be ideal to be able to set the grid size on the webpage while the app is running and have the board and `Robot` class use that value.
+
+### Updated UI
+
+The UI can be updated to match any style guide. The robot movements can also be animated instead of the current appearing / disappearing behaviour. 
+
+Ideally the orientation of the robot should be shown via robot icon (ie front, back, left, right) as opposed to the current compass icon next to the board.
